@@ -64,7 +64,7 @@ html ="""<!DOCTYPE html>
     <body>
     <div class="header">""" +titulo + descricao+'</div>' + body
 
-file_out = open("aula3.html","w")
+file_out = open("index.html","w")
 file_out.write(html)
 file_out.close()
 
