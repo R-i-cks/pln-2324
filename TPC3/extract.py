@@ -7,18 +7,21 @@ doc_t = open(doc_text_path,'r', encoding="utf-8")
 doc = doc_t.read()
 
 # data cleaning
-
+doc = re.sub(r"quimiotaxia\n(.+)\n\f(.+)\n",r"quimiotaxia\n\1\n\2\n", doc)   # único caso encontrado que escapa à regra seguinte, por ter um \f na descrição
 doc = re.sub(r"\n\f","\n\n", doc)  # colocar uma linha em branco nas quebras de pagina
 doc = re.sub(r"\f","", doc)
 
 
 # marcar designações
 
-print(doc)
+
 
 doc = re.sub(r"\n\n(.+)", r"\n\n@\1", doc)
 
 doc = re.sub(r"@(.+)\n\n@", r"@\1\n", doc)
+
+
+print(doc)
 
 #extrair termos
 termos = re.findall(r"@(.+)\n",doc)
