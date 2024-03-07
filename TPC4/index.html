@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="hobbies.css" />
+</head>
+<body>
+    <div class="header">
+        <h1>Hobbies</h2>
+    </div>
+    <div class="content">
+            <div class="intro">
+            <blockquote>
+                "Cooking is an act of love"
+            </blockquote>
+            <p>Um dos meus hobbies preferidos é cozinhar, especialmente cozinhar para outras pessoas.
+            Sou vegetariano à cerca de 3 anos e gosto de descobrir novas cozinhas, e novas formas de pensar sobre a comida.
+                 De certo modo, aquilo que fazemos é uma extensão de nós e daquilo que acreditámos, sendo isto que tento expressar na minha cozinha.  </p>
+            </div>
+            <div class="scrollable" id="s1">
+                    <img src="img1.jpeg" alt="Rolo de cogumelos" class="img" id="1">
+                    <img src="img2.jpeg" alt="Bolachas" class="img" id="2">
+                    <img src="img3.jpeg" alt="Chili vegan" class="img" id=3>
+                    <img src="img4.jpeg" alt="Massa com tomate, cebola frita e azeitonas" class="img" id="4">
+                    <img src="img5.jpeg" alt="Massa verde" class="img" id="5">
+                    <img src="img6.jpeg" alt="Bourguignon vegan" class="img" id="6">
+                    <img src="img7.jpeg" alt="Bolonhesa vegan" class="img" id="7">
+            </div>
+            <div class="series">
+                <div class="intro" id="ser2">
+
+                    <blockquote>"I don't need sleep, I need answers!" <br>
+                        <cite>-Sheldon Cooper, TBBT</cite></blockquote>
+                    <blockquote>"Oh, I'm sorry. Did my back hurt your knife?" <br>
+                        <cite>-Rachel Green, Friends</cite>
+                    </blockquote>
+                    <blockquote>
+                        "I love you."
+                        "It'll pass" <br>
+                        <cite>-Fleabag</cite>
+                    </blockquote>
+                    <blockquote>"Dracarys"
+                        <br>
+                        <cite>-GOT</cite>
+                    </blockquote>
+                    <blockquote>"That's what she said." <br>
+                    <cite>-Michael Scott, The Office</cite></blockquote>
+                </div>
+                <div class="intro" id="p3">
+                    <p>Ver séries, em particular sitcoms é sempre bom.</p>
+                </div>
+            <div class="scrollable" id="s2">
+                <img src="fleabag.jpg" alt="Fleabag" class="img" id="i1">
+                <img src="Friends.jpg" alt="Friends" class="img" id="i2">
+                <img src="office.jpeg" alt="The Office" class="img" id=i3>
+                <img src="Bigbang.jpg" alt="The Big Bang Theory" class="img" id="i4">
+                <img src="youngSheldon.webp" alt="young Sheldon" class="img" id="i5">
+                <img src="GOT.jpg" alt="Game of Thrones" class="img" id="i6">
+            </div>
+                
+            </div>
+    </div>
+    <div class="footnote">
+            Website desenvolvido por Ricardo Araújo   
+    </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script>
+$(document).ready(function() {
+        let scroll1 = setInterval(function() {
+        let currentScrollPosition = $('#s1').scrollLeft();
+        $('#s1').scrollLeft(currentScrollPosition + 2);
+    }, 50);
+});
+
+$(document).ready(function() {
+        let scroll2 = setInterval(function() {
+        let currentScrollPosition2 = $('#s2').scrollLeft();
+        $('#s2').scrollLeft(currentScrollPosition2 + 4);
+    }, 30);
+});
+
+    </script>
+</body>
+</html>
