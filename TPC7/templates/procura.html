@@ -1,0 +1,21 @@
+{% extends 'layout.html' %}
+
+{% block body %}
+
+<div class="input-group flex-nowrap">
+    <span class="input-group-text" id="addon-wrapping">Pesquisa: </span>
+    <input id="pesquisa" type="text" class="form-control"  aria-describedby="addon-wrapping">
+  </div>
+
+
+
+<div class="list-group" id="res">
+    {% for resultado in resultados %}
+    <div class="entrada">
+        <a href="/conceitos/{{resultado}}" class="list-group-item list-group-item-action"><b>{{resultado}}</b></a>
+        <div class="list-group-item list-group-item-action"> {{resultados[resultado]}} </div>
+    </div>
+    {% endfor %}
+</div>
+
+{% endblock %}

@@ -1,0 +1,29 @@
+{% extends 'layout.html' %}
+
+{% block body %}
+<h2>Introduzir novo conceito</h2>
+
+<form action="conceitos" method="POST">
+    <div class="mb-3">
+      <label for="InputDesignacao" class="form-label">Designação</label>
+      <input type="text" class="form-control" id="InputDesignacao" name= "designacao" placeholder="Nova designação">
+    </div>
+    <div class="mb-3">
+        <label for="InputDescricao" class="form-label">Descrição</label>
+        <input type="text" class="form-control" id="InputDescricao" name= "descricao" placeholder="Nova descrição">
+      </div>
+    <button type="submit" class="btn btn-primary">Submit</button>
+  </form>
+
+
+<div class="list-group">
+    <h2>Lista de conceitos</h2>
+    {% for conceito in conceitos %}
+    <a href="/conceitos/{{conceito}}" class="list-group-item list-group-item-action">{{conceito}}</a>
+        
+    {% endfor %}
+</div>
+
+{% endblock %}
+
+

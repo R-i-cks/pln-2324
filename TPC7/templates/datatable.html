@@ -1,0 +1,25 @@
+{% extends 'layout.html' %}
+
+{% block body %}
+
+<h1>Tabela de procura de conceitos</h1>
+<br>
+<br>
+<table id="dados" class="display">
+    <thead>
+        <tr>
+            <th>Conceito</th>
+            <th>Descrição</th>
+        </tr>
+    </thead>
+    <tbody>
+        {% for conceito in conceitos %}
+        <tr>
+            <td><a href="/conceitos/{{conceito}}">{{conceito}}</a></td>
+            <td>{{conceitos[conceito]}}</td>
+        </tr>
+        {% endfor %}
+    </tbody>
+</table>
+
+{% endblock %}
